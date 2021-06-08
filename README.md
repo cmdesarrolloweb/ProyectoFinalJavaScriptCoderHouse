@@ -36,7 +36,7 @@ Proyecto Final Curso Desarrollo Web Coder House
       
  4- Iniciar el npm, con npm init
   - Una vez en el directorio correcto, ejecuta el comando npm init. Se te pedirá responder varias preguntas sobre el proyecto, después de las cuales NPM generará un archivo package. json en tu directorio.
-  ![La descripción de la imagen por si no carga](https://github.com/manteniendowordpress/ProyectoFinalJavaScriptCoderHouse/blob/develop/images/readme/imagen04.mov)
+  ![La descripción de la imagen por si no carga](https://github.com/manteniendowordpress/ProyectoFinalJavaScriptCoderHouse/blob/develop/images/readme/imagen04.gif)
 
  5- Instalar el nodemon:
   - El nodemon es el que va a monitorear los cambios en el código fuente, nuestro SASS,  que se está desarrollando y automáticamente reinicia el servidor para generar el CSS.  
@@ -46,7 +46,7 @@ Proyecto Final Curso Desarrollo Web Coder House
   - Para instalar nuestras dependencias (node-sass y nodemon) ejecutaremos el siguiente comando en la terminal:  npm install -D node-sass nodemon
   - Al final se observa que se creó la carpeta de node_modules y el archivo package-lock.json
   
-  ![La descripción de la imagen por si no carga](https://github.com/manteniendowordpress/ProyectoFinalJavaScriptCoderHouse/blob/develop/images/readme/imagen05.mov)
+  ![La descripción de la imagen por si no carga](https://github.com/manteniendowordpress/ProyectoFinalJavaScriptCoderHouse/blob/develop/images/readme/imagen05.gif)
 
  6- Crear la carpeta SCSS y CSS y sus archivos respectivos, para llevar un orden, o en su defecto el archivo .css y el .scss
 
