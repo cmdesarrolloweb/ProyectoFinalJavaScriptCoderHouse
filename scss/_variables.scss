@@ -1,0 +1,28 @@
+// Generic Styles
+
+// MISC
+// Borders
+$border-radius-0: 0;
+$border-radius-2: 0.125rem;
+$border-radius-4: 0.25rem;
+$border-radius-6: 0.375rem;
+$border-radius-8: 0.45rem;
+$border-radius-10: 0.5rem;
+$border-radius-50: 50%;
+
+// Fondo Instagram y Facebook
+$redes: ( /*Declaramos nuestro mapa de redes*/
+        instagram:  linear-gradient( 120deg, rgb(245, 133, 41), rgb(221, 42, 123), rgb(129, 52, 175), rgb(81, 91, 212)),
+        facebook: rgb(24, 119, 242)
+);
+/*Creamos el bucle para usar los valores del mapa*/
+@each $redSocial, $color in $redes {
+    .novedadesRedesHome__card--#{$redSocial} {
+        background: $color;
+    }
+}
+
+//Labels Productos
+$nuevo: rgb(11, 76, 197);
+$oferta: rgb(219, 16, 16);
+$nostock: orange;

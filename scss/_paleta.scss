@@ -1,0 +1,47 @@
+// Colores Básicos
+$color-white: #fff;
+$color-black: #000;
+
+$color-dark: #1C1E20;
+
+$color-dark-primario: #027F46;
+$color-soft-primario: rgba($color-dark-primario, 0.5);
+
+$color-primero: #047f46;
+$color-segundo: #f6c610;
+$color-tercero: #74cc38;
+$color-cuarto: #5FA44E;
+
+// Light White
+$color-white-300: rgba($color-white, 0.3);
+
+// Gray
+$color-gray-0: rgba($color-black, 0);
+$color-gray-40: rgba($color-black, 0.04);
+$color-gray-70: rgba($color-black, 0.07);
+$color-gray-100: rgba($color-black, 0.1);
+$color-gray-125: rgba($color-black, 0.125);
+$color-gray-250: rgba($color-black, 0.25);
+$color-gray-450: rgba($color-black, 0.45);
+$color-gray-600: rgba($color-black, 0.6);
+$color-gray-800: rgba($color-black, 0.8);
+
+// Bg
+$color-bg-primario: #ededed;
+$color-bg-secundario: #f5f5f5;
+$color-bg-terciario: #f0f0f0;
+
+// Success
+$color-success-verde: #00a650;
+$color-success-verde-secundario: #008744;
+
+// Warning
+$color-warning-naranja: #f73;
+$color-warning-naranja-secundario: #e6540b;
+
+// Error
+$color-error-rojo: #f23d4f;
+$color-error-rojo-secundario: #d12440;
+
+// Hover Color
+$boton-hover: $color-cuarto;

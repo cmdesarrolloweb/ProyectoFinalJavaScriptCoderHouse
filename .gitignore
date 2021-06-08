@@ -1,0 +1,6 @@
+# Directorio de Dependencia
+node_modules
+
+# Trash
+.DS_Store
+.vscode
