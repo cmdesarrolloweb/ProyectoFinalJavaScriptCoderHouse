@@ -3,9 +3,9 @@ Proyecto Final Curso Desarrollo Web Coder House
 
 # Dependencias Iniciales
  ## Instalación paso a paso para procesar CSS a SASS
-    Para la clase de SASS, se necesitará el procesador de CSS. El mismo cuenta con dos componentes:
-    NodeJS es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor que permitirá compilar el código
-    NPM es el Gestor de Paquetes de Node para JavaScript.  En conjunto que permitirá compilar el archivo SASS a CSS.
+   Para la clase de SASS, se necesitará el procesador de CSS. El mismo cuenta con dos componentes:
+   NodeJS es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor que permitirá compilar el código
+   NPM es el Gestor de Paquetes de Node para JavaScript.  En conjunto que permitirá compilar el archivo SASS a CSS.
 
   ## Pasos a Seguir:
 
