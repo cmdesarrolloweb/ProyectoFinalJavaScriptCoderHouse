@@ -1,3 +1,41 @@
+// Simulador carrito de pedido/futuro carro de compras.
+class Producto {
+    constructor(id, nombre, precio, imagen) {
+        this.id = id;
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.imagen = imagen;
+    }
+    
+}
+
+const producto1 = new Producto(1, "Aceite de Oliva Extra Virgen Cocinero 250cc", 199.78, "Aceite-de-Oliva-extra-virgen-Cocinero-250cc.jpg" );
+const producto2 = new Producto(2, "Aceite de Oliva Natura Clasico 500cc", 180.89, "Aceite-Oliva-Natura-clasico-500cc.jpg" );
+const producto3 = new Producto(3, "Café Dolca Clásico 100g", 414.85, "Cafe-Dolca-100-g.jpg" );
+const producto4 = new Producto(4, "Café Dolca Suave 50g", 175.30, "Cafe-Dolca-Suave-50-g.jpg" );
+const producto5 = new Producto(5, "Yerba Sinceridad 1kg", 399.85, "Yerba-Sinceridad-1-kg.jpg" );
+const producto6 = new Producto(6, "Azúcar Ledesma 1kg", 83.25, "Azucar-Ledesma-1-kg.jpg" );
+
+const listaProductos = [producto1, producto2, producto3, producto4, producto5, producto6];
+
+const listaDeCarrito = [];
+
+function agregarAListaCarrito() {
+    listaDeCarrito.push(producto);
+}
+
+function verListaCarrito() {
+    let total = 0;
+    for (producto of listaDeCarrito) {
+        console.log("ID: " + producto.id + " " + producto.nombre);
+        total += producto.precio;
+        //tambien se puede utilizar asi:
+        //total = total + producto.precio;
+    }
+    console.log("Son " + listaDeCarrito.length + " productos\n Total de la compra: $" + total);
+}
+
+
 //Array
 // const listaProductos = [];
 // listaProductos.push(prod1);
