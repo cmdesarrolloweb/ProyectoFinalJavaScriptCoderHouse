@@ -429,6 +429,17 @@ header .topbar-text i {
     -ms-flex-pack: center;
     justify-content: center;
 }
+.shopmodal .lista-productos h4 {
+    text-align: center;
+    background-color: #22223c;
+    color: #fff;
+    padding: .25rem .5rem;
+}
+.shopmodal .lista-productos .item-lista-productos {
+    justify-content: left;
+    border-style: hidden hidden solid hidden;
+    border-color: rgba(0,0,0,.1);
+}
 /* End::ShopModal */
 /* Begin::Section */
 section {

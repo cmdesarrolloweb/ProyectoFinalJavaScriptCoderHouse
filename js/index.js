@@ -21,7 +21,31 @@ const listaProductos = [producto1, producto2, producto3, producto4, producto5, p
 const listaDeCarrito = [];
 
 function agregarAListaCarrito() {
-    listaDeCarrito.push(producto);
+    let productoAgregar = stockProductos.filter((el) => el.id == id)[0]
+    carritoDeCompras.push(productoAgregar)
+    actualizarCarrito() // ver esta funcion a lo ultimo 
+    
+
+    let div = document.createElement('div')
+    div.classList.add('productoEnCarrito')
+    div.innerHTML = `
+        <p>${productoAgregar.nombre}</p>
+        <p>Precio: $${productoAgregar.precio}</p>
+        <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+    `
+    contenedorCarrito.appendChild(div)
+    let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
+
+    botonEliminar.addEventListener('click', ()=>{
+        botonEliminar.parentElement.remove()// es el parentElement porque tengo que eliminar el contendedor entero no solo el boton.
+        carritoDeCompras = carritoDeCompras.filter((el) => el.id != productoAgregar.id)      
+        actualizarCarrito()
+    })
+}
+
+function actualizarCarrito() {
+    contadorCarrito.innerText = carritoDeCompras.length
+    precioTotal.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
 }
 
 function verListaCarrito() {
