@@ -20,6 +20,12 @@ const listaProductos = [producto1, producto2, producto3, producto4, producto5, p
 
 const listaDeCarrito = [];
 
+const contenedorProductos = document.getElementById('listar-productos');
+const contenedorCarrito = document.getElementById('carrito-contenedor');
+
+const contadorCarrito = document.getElementById('contadorCarrito');
+const precioTotal = document.getElementById('precioTotal');
+
 function agregarAListaCarrito() {
     let productoAgregar = stockProductos.filter((el) => el.id == id)[0]
     carritoDeCompras.push(productoAgregar)
