@@ -163,8 +163,8 @@
                                 <span class="navbar-tool-icon text">Terminar
                                     Compra <span class="navbar-tool-icon shop-button
                                             material-icons">shopping_cart</span></span>
-                                <span class="cart-amount bg-color">
-                                    9
+                                <span id="contadorCarrito" class="cart-amount bg-color">
+                                    0
                                 </span>
                             </button>
                         </div>
@@ -441,7 +441,6 @@
         <!-- My Scripts -->
         <script src="js/my-scripts.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/catalogo.js"></script>
 
         <script>
             lightbox.option({
@@ -494,6 +493,76 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                        <!--Begin::CardResumen-->
+                        <div class="card">
+                            <div class="card-header">
+                                Resumen Total
+                            </div>
+                            <div class="card-body">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-grey">Productos</span>
+                                    <span class="price">$1.250</span>
+                                </div>
+                                <div class="divider">
+                                    <span class="vs-divider-border after"></span>
+                                    <span class="vs-divider-border before"></span>
+                                </div>
+                                <div class="flex justify-between
+                                        font-semibold mb-3">
+                                    <span>Total</span>
+                                    <span id="precioTotal" class="price"></span>
+                                </div>
+                                <div class="flex mb-2">
+                                    <div class="input-label input inputMax
+                                            input-primary label-placeholder">
+                                        <div class="input">
+                                            <input type="text" placeholder="Descuento" class="vs-inputx vs-input--input normal" style="border: 1px solid rgba(0, 0, 0, 0.2);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End::CardResumen-->
+                        <div class="lista-productos" id="productoEnCarrito">
+                            <h4>Resumen de Productos</h4>
+                            <div class="item-lista-productos">
+                                <div class="item-lista-vista">
+                                    <div class="item-carro-producto">
+                                        <h5 class="item-nombre-producto">Bocadito Hamlet dulce de leche unidad</h5>
+                                        <div class="item-carro-detalle">
+                                            <div class="item-carro-detalle-left">
+                                                <div class="imgContenedor producto-img imgContenedor-hover">
+                                                    <img src="https://rapisuper.com.ar/cdn/images/catalogue/10342-1.webp">
+                                                </div>
+                                                <div class="btn-eliminar-carro-item">
+                                                    <button class="btn btn-eliminar font-semibold ml-2">ELIMINAR</button>
+                                                </div>
+                                            </div>
+                                            <div class="item-carro-detalle-right">
+                                                <div class="precio-contenedor">
+                                                    <h5 class="precio-descriptcion">Subtotal:</h5>
+                                                    <h5 class="precio-numero">$15,00</h5>
+                                                </div>
+                                                <div class="monto-input-contenedor">
+                                                    <div>
+                                                        <p class="monto-texto">Cantidad</p>
+                                                        <div class="numero-input inline-flex">
+                                                            <button id="disminuir" type="button" onclick="disminuir()" class="btn-less input-number-button-less">
+                                                                <i class="vs-icon notranslate icon-scale material-icons null">remove</i>
+                                                            </button>
+                                                            <input id="cantidad" type="number" min="0" class="input-number-input" style="width: 9.1px;">
+                                                            <button id="aumentar" type="button" onclick="aumentar()" class="btn-plus input-number-button-plus">
+                                                                <i class="vs-icon notranslate icon-scale material-icons null">add</i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!--Begin::CardResumen-->
                         <div class="card">
                             <div class="card-header">
