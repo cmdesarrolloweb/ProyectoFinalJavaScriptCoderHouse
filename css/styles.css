@@ -415,37 +415,37 @@ header .topbar-text i {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.shopmodal .lista-productos h4 {
+.shopmodal .lista-carrito .productoEnCarrito h4 {
   text-align: center;
   background-color: #047f46;
   color: #fff;
   padding: .25rem .5rem; }
 
-.shopmodal .lista-productos .item-lista-vista {
+.shopmodal .lista-carrito .productoEnCarrito .item-lista-vista {
   justify-content: left;
   border-style: hidden hidden solid hidden;
   border-color: rgba(0, 0, 0, 0.1); }
 
-.shopmodal .lista-productos .item-carro-producto {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto {
   margin-right: 1.5rem;
   margin-left: 1.5rem; }
 
-.shopmodal .lista-productos .item-carro-producto .item-nombre-producto {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-nombre-producto {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 16px; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle {
   display: flex;
   width: 100%;
   grid-template-columns: .25fr 1fr; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-left {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-left {
   display: grid; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-left .btn-eliminar-carro-item {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-left .btn-eliminar-carro-item {
   border-radius: .25rem;
   margin-top: .7rem;
   margin-bottom: .7rem;
@@ -454,17 +454,17 @@ header .topbar-text i {
   align-items: center;
   justify-content: center; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-left .btn-eliminar-carro-item button.btn-eliminar {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-left .btn-eliminar-carro-item button.btn-eliminar {
   background-color: #ec1101;
   color: #fff;
   cursor: pointer; }
 
-.shopmodal .lista-productos .item-carro-producto .producto-img {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .producto-img {
   position: relative;
   flex-shrink: 0;
   flex-grow: 0; }
 
-.shopmodal .lista-productos .item-carro-producto .imgContenedor {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .imgContenedor {
   background-color: #fff;
   height: 100px;
   width: 100px;
@@ -473,49 +473,49 @@ header .topbar-text i {
   overflow: hidden;
   display: flex; }
 
-.shopmodal .lista-productos .item-carro-producto .imgContenedor img {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .imgContenedor img {
   display: block;
   width: auto;
   max-height: 100%;
   max-width: 100%;
   margin: auto; }
 
-.shopmodal .lista-productos .item-carro-producto .imgContenedor-hover {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .imgContenedor-hover {
   cursor: pointer;
   transition: .5s; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right {
   display: grid;
   padding-left: 1rem;
   text-align: center;
   width: 100%; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor {
   line-height: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor .precio-descripcion {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor .precio-descripcion {
   width: 100%;
   font-weight: 400; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor .precio-numero {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .precio-contenedor .precio-numero {
   width: 100%;
   margin-bottom: .5rem; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .monto-input-contenedor {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .monto-input-contenedor {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .monto-texto {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .monto-texto {
   font-size: .875rem;
   margin-right: auto;
   margin-left: auto; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input {
   display: inline-flex !important;
   position: relative;
   -webkit-box-align: center;
@@ -529,7 +529,7 @@ header .topbar-text i {
   padding: 2px;
   border-radius: 5px; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right input.input-number-input {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right input.input-number-input {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   width: 40px;
@@ -540,7 +540,7 @@ header .topbar-text i {
   padding: 4px;
   -moz-appearance: textfield; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button {
   min-width: 22px;
   min-height: 22px;
   padding: 0;
@@ -566,15 +566,15 @@ header .topbar-text i {
   backface-visibility: hidden;
   background-color: #5FA44E; }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-less {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-less {
   -webkit-transform: translate(-10px);
   transform: translate(-10px); }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-plus {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-plus {
   -webkit-transform: translate(10px);
   transform: translate(10px); }
 
-.shopmodal .lista-productos .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-plus {
+.shopmodal .lista-carrito .productoEnCarrito .item-carro-producto .item-carro-detalle .item-carro-detalle-right .numero-input button.btn-plus {
   -webkit-transform: translate(10px);
   transform: translate(10px); }
 
