@@ -1,7 +1,7 @@
 const carroDeCompras = [];
 
 const contenedorProductos = document.getElementById('listar-productos');
-const contenedorCarrito = document.getElementById('productoEnCarrito');
+const contenedorCarrito = document.getElementsByClassName('productoEnCarrito');
 
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
@@ -60,7 +60,6 @@ function agregarAlCarrito(id) {
     carroDeCompras.push(productoAgregar)
     actualizarCarrito() // ver esta funcion a lo ultimo 
     
-    contenedorCarrito.innerHTML = ''
     let div = document.createElement('div')
     div.classList.add('productoEnCarrito')
     div.innerHTML = `
@@ -131,19 +130,19 @@ function verListaCarrito() {
     console.log("Son " + carroDeCompras.length + " productos\n Total de la compra: $" + total);
 }
 
-//Funciones para aumentar o disminuir productos
-var inicio = 0; //se inicializa una variable en 0
+// //Funciones para aumentar o disminuir productos
+// var inicio = 0; //se inicializa una variable en 0
 
-function aumentar(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
+// function aumentar(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id aumentar
 
-var cantidad = document.getElementById('cantidad').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
-}
+// var cantidad = document.getElementById('cantidad').value = ++inicio; //se obtiene el valor del input, y se incrementa en 1 el valor que tenga.
+// }
 
-function disminuir(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
+// function disminuir(){ // se crean la funcion y se agrega al evento onclick en en la etiqueta button con id disminuir
 
-var cantidad = document.getElementById('cantidad').value = --inicio; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
+// var cantidad = document.getElementById('cantidad').value = --inicio; //se obtiene el valor del input, y se decrementa en 1 el valor que tenga.
 
-if(cantidad > 0){
+// if(cantidad > 0){
 
-}
-}
+// }
+// }
