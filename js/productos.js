@@ -1,7 +1,7 @@
 const carroDeCompras = [];
 
 const contenedorProductos = document.getElementById('listar-productos');
-const contenedorCarrito = document.getElementsByClassName('productoEnCarrito');
+const contenedorCarrito = document.getElementById('lista-carrito');
 
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
@@ -61,10 +61,10 @@ function agregarAlCarrito(id) {
     actualizarCarrito() // ver esta funcion a lo ultimo 
     
     let div = document.createElement('div')
-    div.classList.add('productoEnCarrito')
+    div.classList.add('itemsCarrito')
+    div.setAttribute("class", "item-lista-productos")
     div.innerHTML = `
-        <div class="item-lista-productos">
-            <div class="item-lista-vista">
+        <div class="item-lista-vista">
                 <div class="item-carro-producto">
                     <h5 class="item-nombre-producto">${productoAgregar.nombre}</h5>
                     <div class="item-carro-detalle">
@@ -73,7 +73,7 @@ function agregarAlCarrito(id) {
                             <img src="images/productos/${productoAgregar.imagen}" alt="Imagen Producto" width="100%">
                             </div>
                             <div class="btn-eliminar-carro-item">
-                                <button class="btn btn-eliminar font-semibold ml-2">ELIMINAR</button>
+                                <button id="eliminar${productoAgregar.id}" class="btn btn-eliminar font-semibold ml-2">ELIMINAR</button>
                             </div>
                         </div>
                         <div class="item-carro-detalle-right">
@@ -98,11 +98,7 @@ function agregarAlCarrito(id) {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-        <p>${productoAgregar.nombre}</p>
-        <p>Precio: $${productoAgregar.precio}</p>
-        <button id="eliminar${productoAgregar.id}" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
     `
     contenedorCarrito.appendChild(div)
     let botonEliminar = document.getElementById(`eliminar${productoAgregar.id}`)
