@@ -55,7 +55,7 @@ const renderizaCard = productos => {
         templateCard.querySelector('img.imagen-producto').setAttribute("src", producto.imagen)
         templateCard.querySelector('img.imagen-producto').setAttribute("title", producto.nombre)
         templateCard.querySelector('a.link-imagen').setAttribute("href", producto.imagen)
-        templateCard.querySelector('a.link-imagen').setAttribute("data-lightbox", "producto-"+producto.id)
+        templateCard.querySelector('a.link-imagen').setAttribute("data-toggle", "lightbox")
         templateCard.querySelector('a.link-imagen').setAttribute("alt", producto.nombre)
         templateCard.querySelector('button.btn-agregar').setAttribute("id", "btnAgregar")
         templateCard.querySelector('button.btn-agregar').textContent = "AGREGAR"
@@ -185,4 +185,9 @@ $(window).scroll(function(){
     } else {
         $('.ir-arriba').slideUp(300);
     }
+});
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
 });
