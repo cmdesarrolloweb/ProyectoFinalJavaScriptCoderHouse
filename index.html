@@ -37,7 +37,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         
         <!--LightBox CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
     </head>
 
     <body id="top">
@@ -159,7 +159,7 @@
                             </div>
                         </a>
                         <div id="mostrarItemsCarrito" class="navbar-tool shop ms-1 ms-lg-3 me-n1 me-lg-0">
-                            <a class="cart_anchor"></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -321,6 +321,47 @@
             </section>
             <!--End::Content-->
 
+            <!--Begin::BuscadorCarroFixedBottomMobile-->
+            <div class="fixed-bottom d-md-none navbar navbar-expand-lg navbar-light bg-dark navbar-stuck-menu navbar-border mt-n2 pt-3 pb-0">
+                <div class="container">
+                    <!--Begin::Search-->
+                    <div class="input-group d-none d-lg-flex me-4">
+                        <input class="search form-control rounded-end pe-5" type="search"
+                            placeholder="Buscar productos, marcas, etc..."
+                            onblur="this.placeholder='Buscar productos, marcas, etc..'" onfocus="this.placeholder=''">
+                        <i class="bi bi-search position-absolute top-60 end-0
+                                translate-middle-y text-muted fs-base me-3"></i>
+                    </div>
+                    <!--End::Search-->
+                    <div class="navbar-toolbar d-flex flex-shrink-0
+                            align-items-center">
+
+                        <a class="navbar-tool ms-0 ms-lg-0 me-n1 me-lg-2" href="#cityModal" data-bs-toggle="modal"
+                            data-bs-target="#cityModal">
+                            <div class="navbar-tool-icon-box"><span class="navbar-tool-icon material-icons
+                                        text-white">place</span></div>
+                            <div class="navbar-tool-text ms-n3">
+                                <small class="text-white">Localidad</small>
+                                <span>San Carlos Centro</span>
+                            </div>
+                        </a>
+                        <div class="navbar-tool shop ms-1 ms-lg-3 me-n1
+                                me-lg-0">
+                            <button type="button" class="navbar-tool-text btn
+                                    btn-primario" data-bs-toggle="modal" data-bs-target="#shopModal">
+                                <span class="navbar-tool-icon text">Terminar
+                                    Compra <span class="navbar-tool-icon shop-button
+                                            material-icons">shopping_cart</span></span>
+                                <span class="cart-amount bg-color">
+                                    9
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Begin::BuscadorCarroFixedBottomMobile-->
+
             <!--Begin::Footer-->
             <footer class="bg-footer">
                 <div class="container">
@@ -371,72 +412,23 @@
                 </div>
             </footer>
             <!--End::Footer-->
-
-            <!--Begin::BuscadorCarroFixedBottomMobile-->
-            <div class="fixed-bottom d-md-none navbar navbar-expand-lg navbar-light bg-dark navbar-stuck-menu navbar-border mt-n2 pt-3 pb-0">
-                <div class="container">
-                    <!--Begin::Search-->
-                    <div class="input-group d-none d-lg-flex me-4">
-                        <input class="search form-control rounded-end pe-5" type="search"
-                            placeholder="Buscar productos, marcas, etc..."
-                            onblur="this.placeholder='Buscar productos, marcas, etc..'" onfocus="this.placeholder=''">
-                        <i class="bi bi-search position-absolute top-60 end-0
-                                translate-middle-y text-muted fs-base me-3"></i>
-                    </div>
-                    <!--End::Search-->
-                    <div class="navbar-toolbar d-flex flex-shrink-0
-                            align-items-center">
-
-                        <a class="navbar-tool ms-0 ms-lg-0 me-n1 me-lg-2" href="#cityModal" data-bs-toggle="modal"
-                            data-bs-target="#cityModal">
-                            <div class="navbar-tool-icon-box"><span class="navbar-tool-icon material-icons
-                                        text-white">place</span></div>
-                            <div class="navbar-tool-text ms-n3">
-                                <small class="text-white">Localidad</small>
-                                <span>San Carlos Centro</span>
-                            </div>
-                        </a>
-                        <div class="navbar-tool shop ms-1 ms-lg-3 me-n1
-                                me-lg-0">
-                            <button type="button" class="navbar-tool-text btn
-                                    btn-primario" data-bs-toggle="modal" data-bs-target="#shopModal">
-                                <span class="navbar-tool-icon text">Terminar
-                                    Compra <span class="navbar-tool-icon shop-button
-                                            material-icons">shopping_cart</span></span>
-                                <span class="cart-amount bg-color">
-                                    9
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Begin::BuscadorCarroFixedBottomMobile-->
-        
             <span class="ir-arriba icon-arrow-up2"></span>
         </div>
         <!--End::App-->
         
         <!--Begin::ShopModal-->
-        <div class="shopmodal modal fade" id="shopModal" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="shopmodal modal fixed-right fade" id="shopModal" tabindex="-1" data-bs-backdrop="static" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-aside">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary-vida">
-                        <h5 class="modal-title text-white">Carrito</h5>
+                    <div class="modal-header bg-dark-vida bg-primary-vida">
+                        <h4 class="modal-title text-white">Carrito</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <div id="lista-carrito">
-                            <h4>Resumen de Productos</h4>
-                            <div id="itemsCarrito"></div>
-                            <!--Begin::CardResumen-->
-                            <div id="footer"></div>
-                            <!--End::CardResumen-->
-                        </div>
+                    <div id="footer"></div>
+                    <div id="itemsCarrito">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primario">Aceptar</button>
                     </div>
                 </div>
             </div>
@@ -450,15 +442,15 @@
                     <div class="card rounded-4">
                         <div class="card-body text-center d-flex d-md-block">
                             <div class="col-2 col-md-12">
-                                <a class="link-imagen">
+                                <!-- <a class="link-imagen"> -->
                                     <img class="imagen-producto" width="100%">
-                                </a>
+                                <!-- </a> -->
                             </div>
                             <div class="col-6 col-md-12">
                                 <h5 class="card-title fw-6 mt-1 mb-1 mt-lg-3 mb-lg-3 ps-2 px-lg-3 text-start text-md-center"></h5>
                             </div>
                             <div class="col-4 col-md-12">
-                                <p class="card-text precio mb-1 mb-lg-4 fw-9">$ </p>
+                                <p class="card-text mb-1 mb-lg-4 fw-9">$ <span class="precio"></span></p>
                             </div>
                             <button class="btn-agregar agregar-carrito d-flex d-md-block card-link btn btn-primario col-12 mx-auto align-middle">
                                 
@@ -471,31 +463,44 @@
 
             <!-- Start::TemplateCarrito -->
                 <template id="template-carrito">
-                    <div class="item-lista-vista">
-                        <div class="item-carro-producto">
-                            <h5 class="item-nombre-producto"></h5>
-                            <span class="d-none"></span>
-                            <div class="item-carro-detalle">
-                                <div class="item-carro-detalle-left">
-                                    <div class="imgContenedor producto-img imgContenedor-hover">
-                                        <img width="100%">
+                    <div class="items-list-view">
+                        <div class="product-cart-item">
+                            <h5 class="cart-item-name">Nombre</h5>
+                            <div class="cart-item-details">
+                                <span class="id-producto d-none"></span>
+                                <div class="cart-item-details-left">
+                                    <div class="imgContainer product-img">
+                                        <img class="img-product w-100">
+                                    </div>
+                                    <div class="delete-cart-item-btn">
+                                        <span class="feather-icon select-none relative">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x h-4 w-4">
+                                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                                            </svg>
+                                        </span>
+                                        <span class="btn-eliminar-producto text-sm font-semibold ms-2">
+                                            ELIMINAR
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="item-carro-detalle-right">
-                                    <div class="precio-contenedor">
-                                        <h5 class="precio-descriptcion">Subtotal:</h5>
-                                        <span class="d-inline">$</span><h5 class="precio-numero"></h5>
+                                <div class="cart-item-details-right">
+                                    <div class="price-container">
+                                        <h5 class="price-description">
+                                            Subtotal:
+                                        </h5>
+                                        <strong><span>$ <span class="price-number">532,15</span></span></strong>
                                     </div>
-                                    <div class="monto-input-contenedor">
+                                    <div class="amount-input-container">
                                         <div>
-                                            <p class="monto-texto">Cantidad</p>
-                                            <div class="numero-input inline-flex">
-                                                <button type="button" class="btn-less input-number-button-less">
-                                                    <i class="vs-icon notranslate icon-scale material-icons null">remove</i>
+                                            <p class="amount-text">Cantidad</p>
+                                            <div class="input-number d-inline-flex input-number-size-null input-number-primary">
+                                                <button type="button" class="btn-less bg-dark-vida input-number--button-less">
+                                                    -
                                                 </button>
-                                                <span class="cantidad input-number-input" style="width: 9.1px;"></span>
-                                                <button type="button" class="btn-plus input-number-button-plus">
-                                                    <i class="vs-icon notranslate icon-scale material-icons null">add</i>
+                                                <span class="input-number cantidad-number" style="width: 9.1px;"></span>
+                                                <button type="button" class="btn-plus bg-dark-vida input-number--button-plus">
+                                                    +
                                                 </button>
                                             </div>
                                         </div>
@@ -503,42 +508,60 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-eliminar font-semibold ml-2"></button>
                     </div>
+                    
                 </template>
             <!-- End::TemplateCarrito -->
 
             <!-- Start::TemplateFooter -->
                 <template id="template-footer">
-                    <div class="divider">
-                        <span class="vs-divider-border after"></span>
-                        <span class="vs-divider-border before"></span>
-                    </div>
-                    <div class="btn-vaciar-carro w-100">
-                        <button id="btnVaciarCarrito" class="btn btn-eliminar font-semibold ml-2">ELIMINAR</button>
-                    </div>
-                    <div class="divider">
-                        <span class="vs-divider-border after"></span>
-                        <span class="vs-divider-border before"></span>
-                    </div>
-                    <div class="card">
-                        <div class="card-header">
-                            Resumen Total
+                    <div class="cart-resume">
+                        <div class="cart-resume__header">
+                            <h5 class="mb-0">Resumen total</h5>
                         </div>
-                        <div class="card-body">
-                            <div class="flex justify-between
-                                    font-semibold mb-3">
-                                <span>Total</span>
-                                <span class="precioproducto" >$ <span id="precioTotal"></span></span>
+                        <div class="cart-resume__body">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-grey">Productos</span>
+                                <span class="cantidad"></span>
+                                <span class="total">$1.154,40</span>
+                            </div>
+                            <div class="divider">
+                                <span class="divider-border after divider-border-default" style="width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.1);"></span>
+                                <span class="divider-border before divider-border-default" style="width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.1);"></span>
+                            </div>
+                            <div class="flex justify-between font-semibold mb-3">
+                                <span>Total</span><span class="total">$1154.40</span>
                             </div>
                             <div class="flex mb-2">
-                                <div class="input-label input inputMax
-                                        input-primary label-placeholder">
+                                <div class="input-label input inputMax label-placeholder">
                                     <div class="input">
-                                        <input type="text" placeholder="Descuento" class="vs-inputx vs-input--input normal" style="border: 1px solid rgba(0, 0, 0, 0.2);">
+                                        <input type="text" class="inputx input--input normal" placeholder="Descuento" style="border: 1px solid rgba(0, 0, 0, 0.2);">
                                     </div>
+                                    <span></span>
                                 </div>
+                                <button type="button" name="button" class="button checkDiscountBtn btn-primario button-filled">
+                                    <span class="button-backgroundx button--background" style="opacity: 1; left: 20px; top: 20px; width: 0px; height: 0px; transition: width 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;"></span>
+                                    <span class="button-text button--text">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-check fa-w-16">
+                                            <path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z" class=""></path>
+                                        </svg>
+                                    </span>
+                                    <span class="button-linex" style="top: auto; bottom: -2px; left: 50%; transform: translate(-50%);"></span>
+                                </button>
                             </div>
+                            <button type="button" name="button" title="" class="button rs-button w-100 btn-primario button-filled" style="text-align: center;">
+                                <span class="button-backgroundx button--background" style="opacity: 1; left: 20px; top: 20px; width: 0px; height: 0px; transition: width 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;"></span>
+                                <span class="button-text button--text">CONTINUAR</span>
+                                <span class="button-linex" style="top: auto; bottom: -2px; left: 50%; transform: translate(-50%);">
+                            </span></button>
+                            <div class="empty-cart-btn mt-4 text-center">
+                                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                                    Vaciar Carro
+                                </button>
+                            </div>
+                        </div>
+                        <div class="cart-resume__resume-product">
+                            <h4 class="bg-dark-vida text-white text-center mb-4 pb-2 pt-2">Resumen de Productos</h4>
                         </div>
                     </div>
                 </template>
@@ -573,7 +596,7 @@
         <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 
         <!-- LightBox JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
 
         <!-- My Scripts -->
         <!-- <script src="js/my-scripts.js"></script>
