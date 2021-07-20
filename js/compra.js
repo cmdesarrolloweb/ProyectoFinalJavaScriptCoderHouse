@@ -74,18 +74,49 @@ function procesarCompra() {
     //Por último, simulamos un envío. Estoy viendo la forma de implementar emailJS
     }else {
         
-       const cargandoGif = document.querySelector('#cargando')
-       cargandoGif.style.display = 'block'
+       //aqui se coloca el user id generado en el emailJS
+        (function () {
+            emailjs.init('user_q33Mg8cksyPGu1A5qO9wv')
+        })();
 
-       const enviado = document.createElement('img')
-       enviado.src = 'images/mail.gif'
-       enviado.style.display = 'block'
-       enviado.style.width = '150px'
+        var myform = $("form#procesar-pago")
 
-       setTimeout(() => {
-        cargandoGif.style.display = 'none'
-        document.querySelector('#loaders').appendChild(enviado)
-       }, 3000)
+        myform.submit( (event) => {
+            event.preventDefault();
+
+            // Change to your service ID, or keep using the default service
+            var service_id = "default_service"
+            var template_id = "template_oirx7i5"
+
+            const cargandoGif = document.querySelector('#cargando')
+            cargandoGif.style.display = 'block'
+            cargandoGif.style.width = '150px'
+
+            const enviado = document.createElement('img')
+            enviado.src = 'images/mail.gif'
+            enviado.style.display = 'block'
+            enviado.width = '150'
+
+            emailjs.sendForm(service_id, template_id, myform[0])
+                .then(() => {
+                    cargandoGif.style.display = 'none'
+                    document.querySelector('#loaders').appendChild(enviado)
+
+                    setTimeout(() => {
+                        localStorage.clear()
+                        enviado.remove()
+                        window.location = "index.html"
+                    }, 2000)
+
+
+                }, (err) => {
+                    alert("Error al enviar el email\r\n Response:\n " + JSON.stringify(err))
+                    // myform.find("button").text("Send");
+                });
+
+            return false;
+
+        });
 
     }
 }
