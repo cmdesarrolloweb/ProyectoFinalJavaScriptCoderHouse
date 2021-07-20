@@ -1,12 +1,12 @@
 //Validacion formulario
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Ejemplo de JavaScript de inicio para deshabilitar el envío de formularios si hay campos no válidos
 (function () {
     'use strict'
   
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
     var forms = document.querySelectorAll('.needs-validation')
   
-    // Loop over them and prevent submission
+    // Bucle sobre ellos y evitar el submit
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
         form.addEventListener('submit', function (event) {
@@ -28,8 +28,12 @@ const footer = document.getElementById('footer')
 const templateCarrito = document.getElementById('template-carrito').content
 const templateFooter = document.getElementById('template-footer').content
 const fragment = document.createDocumentFragment()
-
-let carrito = {}
+const procesarCompraBtn = document.getElementById('procesar-compra')
+const nombre = document.getElementById('nombre');
+const apellido = document.getElementById('apellido');
+const correo = document.getElementById('correo');
+const localidad = document  .getElementById('localidad')
+const provincia = document.getElementById('provincia')
 
 // Eventos
 // El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
@@ -40,6 +44,51 @@ document.addEventListener('DOMContentLoaded', e => {
     }
 })
 itemsCarrito.addEventListener('click', e => { btnEliminarProducto(e) })
+//cuando se selecciona procesar Compra
+procesarCompraBtn.addEventListener('click', procesarCompra);
+
+function procesarCompra() {
+    //Valudamos que el carrito sea igual a cero, si cumple,
+    //levanta un alert diciendo que no hay productos y redirecciona al index o al catalogo
+    if (Object.keys(carrito).length === 0 ) {
+        Swal.fire({
+            type: 'error',
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No hay productos, selecciona alguno',
+            showConfirmButton: false,
+            timer: 2500
+        }).then(function () {
+            window.location = "index.html";
+        })
+    //si no entra al if anterior, pasa por acá a validar los campos del formulario.
+    }else if (nombre.value === '' || apellido.value === '' || correo.value === '' || localidad.value === '' || provincia.value === '') {
+        Swal.fire({
+            type: 'error',
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Todos los campos son requeridos. Por favor Ingréselos.',
+            showConfirmButton: false,
+            timer: 2500
+        })
+    //Por último, simulamos un envío. Estoy viendo la forma de implementar emailJS
+    }else {
+        
+       const cargandoGif = document.querySelector('#cargando')
+       cargandoGif.style.display = 'block'
+
+       const enviado = document.createElement('img')
+       enviado.src = 'images/mail.gif'
+       enviado.style.display = 'block'
+       enviado.style.width = '150px'
+
+       setTimeout(() => {
+        cargandoGif.style.display = 'none'
+        document.querySelector('#loaders').appendChild(enviado)
+       }, 3000)
+
+    }
+}
 
 const renderizaCarritoCompra = () => {
     itemsCarrito.innerHTML = ''
@@ -80,8 +129,12 @@ const renderizarFooter = () => {
     // sumar totales
     const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad, 0)
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio, 0)
+    const iva = nPrecio * 0.21
+    const totalMasIva = nPrecio + iva
     templateFooter.querySelector('span.cantidad').textContent = "(" + nCantidad + ")"
     templateFooter.querySelector('span.total').textContent = nPrecio.toFixed(2)
+    templateFooter.querySelector('span.iva').textContent = iva.toFixed(2)
+    templateFooter.querySelector('span.totalmasiva').textContent = totalMasIva.toFixed(2)
 
 
     const clone = templateFooter.cloneNode(true)

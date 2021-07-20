@@ -35,8 +35,10 @@
         <!-- Animate.css -->
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+        <!-- Sweet Alert CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
         
-        <!--LightBox CSS -->
         
     </head>
 
@@ -175,10 +177,10 @@
                         <div class="col-lg-12">
                             <!--Start::Listado de Productos-->
                             <div class="row d-flex align-items-center" id="formulario-compra">
-                                <form class="row g-3 needs-validation" novalidate>
+                                <form class="row g-3 needs-validation" id="procesar-pago" action="#">
                                     <div class="col-md-4">
-                                      <label for="validationCustom01" class="form-label">Nombre</label>
-                                      <input type="text" class="form-control" id="validationCustom01" placeholder="Ingresá tu nombre" required>
+                                      <label for="nombre" class="form-label">Nombre</label>
+                                      <input type="text" class="form-control" id="nombre" name="nombredestinatario" placeholder="Ingresá tu nombre" required>
                                       <div class="invalid-feedback">
                                         Por favor ingrese un nombre.
                                       </div>
@@ -187,8 +189,8 @@
                                       </div>
                                     </div>
                                     <div class="col-md-4">
-                                      <label for="validationCustom02" class="form-label">Apellido</label>
-                                      <input type="text" class="form-control" id="validationCustom02" placeholder="Ingresá tu apellido" required>
+                                      <label for="apellido" class="form-label">Apellido</label>
+                                      <input type="text" class="form-control" id="apellido" name="apellidodestinatario" placeholder="Ingresá tu apellido" required>
                                       <div class="invalid-feedback">
                                         Por favor ingrese un apellido.
                                       </div>
@@ -197,9 +199,9 @@
                                       </div>
                                     </div>
                                     <div class="col-md-4">
-                                      <label for="validationCustomUsername" class="form-label">Email</label>
+                                      <label for="email" class="form-label">Email</label>
                                       <div class="input-group has-validation">
-                                        <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="Ingresá tu email." required>
+                                        <input type="email" class="form-control" id="correo" name="cc_to" aria-describedby="inputGroupPrepend" placeholder="Ingresá tu email." required>
                                         <div class="invalid-feedback">
                                           Por favor ingrese un email.
                                         </div>
@@ -209,8 +211,8 @@
                                       </div>
                                     </div>
                                     <div class="col-md-6">
-                                      <label for="validationCustom03" class="form-label">Localidad</label>
-                                      <input type="text" class="form-control" id="validationCustom03" placeholder="Ingresá tu localidad" required>
+                                      <label for="localidad" class="form-label">Localidad</label>
+                                      <input type="text" class="form-control" id="localidad" name="localidad" placeholder="Ingresá tu localidad" required>
                                       <div class="valid-feedback">
                                         Parece estar bien!
                                         </div>
@@ -219,8 +221,8 @@
                                       </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="validationCustom04" class="form-label">Provincia</label>
-                                        <input type="text" class="form-control" id="validationCustom04" placeholder="Ingresá tu Provincia" required>
+                                        <label for="provincia" class="form-label">Provincia</label>
+                                        <input type="text" class="form-control" id="provincia" name="provincia" placeholder="Ingresá tu Provincia" required>
                                         <div class="valid-feedback">
                                           Parece estar bien!
                                           </div>
@@ -242,21 +244,15 @@
                                         <div id="footer"></div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                          <label class="form-check-label" for="invalidCheck">
-                                            Acepte los términos y condiciones
-                                          </label>
-                                          <div class="invalid-feedback">
-                                            Debe aceptar los términos y condiciones.
-                                          </div>
+                                        <div class="row justify-content-center" id="loaders">
+                                            <img style="width: 150px" id="cargando" src="images/cargando.gif">
                                         </div>
-                                      </div>
+                                    </div>
                                     <div class="col-6">
                                         <button class="btn btn-primary" type="button" onclick="location.href='index.html'">Seguir Comprando</button>
                                       </div>
                                     <div class="col-6">
-                                      <button class="btn btn-primary" type="submit">Realizar Pedido</button>
+                                      <button href="#" class="btn btn-success" id="procesar-compra">Realizar Pedido</button>
                                     </div>
                                   </form>
                             </div>
@@ -412,15 +408,17 @@
                     <div class="cart-resume__body">
                         <div class="row ms-4 me-4 border-bottom">
                             <div class="col-2"><p class="fw-bold">Resumen Total</p></div>
-                            <div class="col-5"><p class="fw-bold"></p></div>
-                            <div class="col-2"><p class="fw-bold text-center">Cantidad</p></div>
-                            <div class="col-3"><p class="fw-bold text-center">Total</p></div>
+                            <div class="col-2"><p class="fw-bold text-center">Productos</p></div>
+                            <div class="col-4"><p class="fw-bold text-center">Subtotal</p></div>
+                            <div class="col-2"><p class="fw-bold text-center">Iva</p></div>
+                            <div class="col-2"><p class="fw-bold text-center">Total</p></div>
                         </div>
                         <div class="row ms-4 me-4 mt-4">
                             <div class="col-2"><p class=""></p></div>
-                            <div class="col-5"><p class=""></p></div>
                             <div class="col-2"><p class="text-center"><span class="cantidad"></span></p></div>
-                            <div class="col-3"><p class="fw-bold text-center"><span class="total">$1.154,40</span></p></div>
+                            <div class="col-4"><p class="text-center"><span>$ <span class="total"></span></span></p></div>
+                            <div class="col-2"><p class="text-center"><span>$ <span class="iva"></span></span></p></div>
+                            <div class="col-2"><p class="fw-bold text-center"><span>$ <span class="totalmasiva"></span></span></p></div>
                         </div>
                         
                     </div>
@@ -446,7 +444,8 @@
         <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 
-        <!-- LightBox JS -->
+        <!--Sweet Aletr JS -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
         
 
         <!-- My Scripts -->
