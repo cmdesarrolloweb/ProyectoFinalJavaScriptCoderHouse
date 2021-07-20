@@ -156,7 +156,7 @@ const renderizarFooter = () => {
         <div class="no-cart-products-msg-container">
             <h4 class="text-center">El carro está vacío</h4>
             <img src="https://rapisuper.com.ar/cdn/images/cart/empty_cart.svg" class="no-cart-products-img">
-            <button type="button" name="button" title="" class="button rs-button btn-primario vs-button-filled" style="text-align: center;">
+            <button type="button" name="button" title="" onclick="location.href='index.html'" class="button rs-button btn-primario vs-button-filled" style="text-align: center;">
             <span class="button-backgroundx button--background" style="opacity: 1; left: 20px; top: 20px; width: 0px; height: 0px; transition: width 0.3s ease 0s, height 0.3s ease 0s, opacity 0.3s ease 0s;"></span>
             <span class="button-text button--text">Ir al catálogo</span>
             <span class="button-linex" style="top: auto; bottom: -2px; left: 50%; transform: translate(-50%);"></span>

@@ -123,9 +123,6 @@ a:hover {
 .me-3 {
   margin-right: 0.75rem !important; }
 
-.me-4 {
-  margin-right: 1rem !important; }
-
 .ms-n3 {
   margin-left: -1rem !important; }
 
@@ -829,6 +826,36 @@ section {
     line-height: 18px; }
 
 /* End::Catalogo */
+/* Begin::Compra */
+.comprar .comprar-body .card {
+  /* transition: box-shadow 0.5s ease-in-out; */
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12); }
+  .comprar .comprar-body .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2); }
+  .comprar .comprar-body .card .card-body img {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    /* border: 1px solid #eee; */
+    border: 1px solid #047f46;
+    overflow: hidden; }
+  .comprar .comprar-body .card .card-body .comprar-body h5 {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.1rem; }
+  .comprar .comprar-body .card .card-body .comprar-body .filter-container .ofertas input[type="checkbox"], .comprar .comprar-body .card .card-body .comprar-body .filter-container .ofertas input[type="radio"], .comprar .comprar-body .card .card-body .comprar-body .filter-container .ofertas label, .comprar .comprar-body .card .card-body .comprar-body .filter-container .categorias input[type="checkbox"], .comprar .comprar-body .card .card-body .comprar-body .filter-container .categorias input[type="radio"], .comprar .comprar-body .card .card-body .comprar-body .filter-container .categorias label {
+    cursor: pointer; }
+  .comprar .comprar-body .card .card-body button.card-link {
+    width: 100%;
+    font-size: 11px;
+    line-height: 18px; }
+  .comprar .comprar-body .card .card-body span.navbar-tool-icon {
+    font-size: 13px;
+    line-height: 18px; }
+
+/* End::Compra */
 /* Start ScrollToTop */
 .ir-arriba {
   display: none;
